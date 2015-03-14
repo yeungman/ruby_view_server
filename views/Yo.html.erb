@@ -1,0 +1,13 @@
+<h1>Yo!</h1>
+<div><p><span style="color: #cc0000;">This is you, Andy. How is it going this morning?</span></p>
+	<% Time.now %>
+</div>
+<ul>
+  <% ['apples', 'oranges', 'bananas'].each do |fruit| %>
+    <li>I like to eat <%= fruit %></li>
+  <% end %>
+</ul>
+
+<a href="https://www.google.com">This is a link to Googol. Er, I mean Google.</a>
+<p>Try numero dos-- this time using the 'link-to' function in Ruby.</p>
+<%= link_to('This is a link to google', 'https://www.google.com') %>

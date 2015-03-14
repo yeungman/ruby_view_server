@@ -1,5 +1,5 @@
 require 'erb'
 
-x = 42
-template = ERB.new "The value of x is: <%= x %>"
-puts template.result(binding)
+friends = ['Shao','David','Henry','Sam']
+puts friends.map {|friend|
+	friend.upcase}
