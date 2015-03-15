@@ -7,6 +7,18 @@
 <html>
   <body>
     <h1>You're using a layout</h1>
+    
+        <% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+          <p>Hola <%= @request.query['first_name'] %></p>
+        <% else %>
+          <p>Enter your name, pretty please.</p>
+        <% end %>
+
+<form method='post' action="<%= @request.path %>">
+    First name: <input type="text" name="first_name" placeholder='first name'/><br />
+    <input type="submit" value="Submit" />
+</form>
+
     <p>
       <h3> I'm a header</h3>
       <p>Put things in the header</p>
@@ -24,3 +36,4 @@
     </div>
   </body>
 </html>
+
